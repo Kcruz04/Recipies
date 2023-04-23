@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Recipe</title>
+</head>
+<body>
+    <h1>Edit "{{recipe.name}}"</h1>
+    <form action="/update_recipe" method="POST"><br>
+        <label for="name">Name:</label><br>
+        <input type="text" name="name" value="{{recipe.name}}"><br>
+        <label for="discription">Description:</label><br>
+        <input type="text" name="discription" value="{{recipe.discription}}"><br>
+        <label for="instructions">Instructions:</label><br>
+        <input type="text" name="instructions" value="{{recipe.instructions}}"><br>
+        
+        <input type="hidden" name="id" value="{{recipe.id}}">
+        <p>Under 30 Minutes?</p><br>
+        <input type="radio" name="under" value="yes">
+        <label for="yes">yes</label>
+        <input type="radio" name="under" value="no">
+        <label for="no">no</label><br>
+        <input type="submit" value="Update"><br>
+        <a href="/recipes">back to recipes</a>
+</body>
+</html>

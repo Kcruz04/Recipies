@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Recipe</title>
+</head>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <div style="display: flex; gap: 100px; align-items: center;">
+        <div>
+            <h1>{{session['uid']}}'s Recipe</h1>
+            <h2>{{recipe.name}}</h2>
+
+
+        </div>
+        <div>
+            <a href="/recipes">back to recipes</a> | 
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div>
+        <table style="width:100%">
+            <tr>
+                <td>Description</td>
+                <td>{{recipe.discription}}</td>
+            </tr>
+            <tr>
+                <td>Under 30 min?</td>
+                <td>{{recipe.under}}</td>
+            </tr>
+            <tr>
+                <td>Instructions</td>
+                <td>{{recipe.instructions}}</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
